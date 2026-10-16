@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Alyona",
+    "role": "Russia",
+    "initials": "A",
+    "text": "I discovered Divyaum and it changed everything. The pandits are so knowledgeable, and the rituals are performed with such devotion. I attend one of the Pooja every month from my home in St. Petersburg. It is spiritually fulfilling and beautifully organised. Truly divine service!",
+    "rating": 5,
+    "image": "/testimonial/alyona.png"
+  },
+  {
+    "id": 2,
+    "name": "Kajal",
+    "role": "Canada",
+    "initials": "K",
+    "text": "When I shifted to Canada, I assumed that I would never be able to enjoy the elaborate pooja and havans. Thanks to DivyAum, which lets me conduct all my Poojas, that too online. They also send the Prasad that makes it more worthwhile.",
+    "rating": 5,
+    "image": "/testimonial/kajal.png"
+  },
+  {
+    "id": 3,
+    "name": "Shashi Tickoo",
+    "role": "Delhi",
+    "initials": "ST",
+    "text": "Rudraksh are original and of good quality.",
+    "rating": 5,
+    "image": "/testimonial/shashi.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Sakshi Harshit Bansal",
+    "role": "Delhi",
+    "initials": "SB",
+    "text": "A great brand that lets me stay grounded and close to my Sanatan roots. Authentic products. Great work, guys.",
+    "rating": 5,
+    "image": "/testimonial/sakshi1.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Ravi Zutshi",
+    "role": "Delhi",
+    "initials": "RZ",
+    "text": "Divyaum's products are exceptional, pure, authentic, and spiritually powerful. The rudraksha has transformed my daily prayers. Fast delivery, beautiful packaging. Truly trustworthy for all pooja needs",
+    "rating": 5,
+    "image": "/testimonial/ravi.jpeg"
+  }
+]

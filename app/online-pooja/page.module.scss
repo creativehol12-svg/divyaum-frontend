@@ -1,0 +1,183 @@
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.hero {
+  position: relative;
+  min-height: clamp(320px, 44vw, 440px);
+
+@media (min-width: 1024px) {
+  min-height: 600px;
+}
+  display: flex;
+  align-items: center;
+  padding: 48px 0;
+  margin-bottom: 50px;
+  overflow: hidden;
+  background: url("/banner/pooja-section-banner.jpeg") right center / cover no-repeat;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    inset: 0;
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(var(--body-background-color-rgb), 0.98) 0%,
+    //   rgba(var(--body-background-color-rgb), 0.94) 38%,
+    //   rgba(var(--body-background-color-rgb), 0.72) 58%,
+    //   rgba(var(--body-background-color-rgb), 0.18) 82%,
+    //   rgba(var(--body-background-color-rgb), 0) 100%
+    // );
+
+    z-index: -1;
+  }
+}
+
+.heroContainer {
+  // width: 100%;
+  padding-left: 10px;
+}
+.content {
+  max-width: 680px;
+  display: grid;
+  gap: 10px;
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(var(--accent-dark-color-rgb), 0.82);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--banner-heading-font);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: rgba(var(--heading-color-rgb), 0.95);
+}
+
+.lead {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--muted-text-color);
+  line-height: 1.60;
+  max-width: 62ch;
+}
+
+.button {
+  margin-top: 6px;
+  width: fit-content;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(var(--surface-background-color-rgb), 0.98);
+  background: linear-gradient(
+    180deg,
+    var(--button-gradient-start),
+    var(--button-gradient-end)
+  );
+  box-shadow: 0 12px 24px rgba(var(--primary-dark-color-rgb), 0.18);
+}
+
+.arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.listWrap {
+  scroll-behavior: smooth;
+  scroll-margin-top: 70px;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    aspect-ratio: 1584 / 672;
+    min-height: unset;
+    height: auto;
+    padding: 12px 0 14px;
+    margin-bottom: 36px;
+    // align-items: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    background: url("/banner/pooja-section-banner.jpeg") center center / cover
+      no-repeat !important;
+
+    &::before {
+      top: 0;
+      // background: linear-gradient(
+      //   180deg,
+      //   rgba(var(--body-background-color-rgb), 0.94) 0%,
+      //   rgba(var(--body-background-color-rgb), 0.82) 40%,
+      //   rgba(var(--body-background-color-rgb), 0.42) 100%
+      // );
+    }
+  }
+
+  .heroContainer {
+    padding-left: 0;
+  }
+
+  .content {
+    gap: 4px;
+    max-width: 58%;
+  }
+
+  .kicker {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+
+  .title {
+    font-size: clamp(0.95rem, 4.2vw, 1.15rem);
+    line-height: 1.12;
+    margin: 0;
+  }
+
+  .lead {
+    font-size: 11px;
+    line-height: 1.35;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .button {
+    margin-top: 4px;
+    min-height: 32px;
+    padding: 0 12px;
+    font-size: 11px;
+    width: auto;
+    max-width: 168px;
+  }
+}
+
+@media (max-width: 620px) {
+  .main {
+    overflow-x: clip;
+  }
+
+  .hero {
+    margin-bottom: 28px;
+    padding: 10px 0 12px;
+  }
+}

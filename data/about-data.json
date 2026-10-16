@@ -1,0 +1,114 @@
+{
+  "founders": [
+    {
+      "name": "Amit Shankar",
+      "role": "Founder",
+      "image": "/founders/amit.jpeg",
+      "bio": "He has over 25 years of experience in brand development at prominent global advertising agencies, working with Fortune 500 brands. After decades of building brands for others, he is now creating a platform that connects 1.2 billion Hindus worldwide to their cultural roots, rituals, and identity.",
+      "initials": "AS"
+    },
+    {
+      "name": "Anita Ajwani",
+      "role": "CEO & Co-founder ",
+      "image": "/founders/anita.jpeg",
+      "bio": "With over two decades of experience across hospitality, branding, and experiential strategy, she mentors and consults emerging and established brands to help them discover their authentic voice and build with soul, not just scale. Honoured as Woman Entrepreneur of the Year 2024, she is a serial entrepreneur.  ",
+      "initials": "AA"
+    },
+    {
+      "name": "Avnish Dhoundiyal",
+      "role": "Content Head ",
+      "image": "/founders/avnish.png",
+      "bio": "A traveller and photographer, he dabbles in both worlds, the real and AI, bringing content that is engaging, cutting-edge, and contextual.His strength lies in his roots, devotion and desire to create a platform that unifies Sanatanis worldwide.",
+      "initials": "AD"
+    },
+    {
+      "name": "Rahul Kaul",
+      "role": "Head- Marketing & Alliances",
+      "image": "/founders/rahul.jpeg",
+      "bio": "A marketer and creative entrepreneur with more than a decade in advertising, Rahul Kaul brings together strategic brand thinking, artistic expression, and a deep connection to India's spiritual heritage.A Kashmiri Pandit, a Shaivism believer, and a passionate painter, he is driven by the belief that culture, creativity, and timeless wisdom can inspire meaningful change.",
+      "initials": "RK"
+    },
+    {
+      "name": "Sachin Agarwal",
+      "role": "Product Head",
+      "image": "/founders/sachinagarwal.jpeg",
+      "bio": "Sachin Agarwal, a hotel management graduate of Johnson & Wales University (USA), built his career with globally recognized hospitality brands — Radisson, Marriott, Caesars Casino (Lake Tahoe), and Captain Cook Cruises Australia — across the U.S., U.K., and Australia. He specializes in product development, logistics management, operational efficiency, and manpower training, with a consistent record of delivering measurable business results.",
+      "initials": "SA"
+    }
+  ],
+  "vision": {
+    
+    "title": "United Sanatan World ",
+    "description": "Sanatan Dharma was never meant to be a Sunday ritual or a festive obligation. It was meant to be the very rhythm of your life — woven into how you wake, how you work, how you love, how you breathe.",
+    "pillars": [
+      {
+        "icon": "/icon/1.png",
+        "title": "More than just a store",
+        "desc": "A sacred bridge between the life you are living and the life Sanatan calls you toward — where devotion is not an event but a daily act."
+      },
+      {
+        "icon": "/icon/2.png",
+        "title": "To preserve what is eternal",
+        "desc": "To make the sacred accessible. To bring the Sanatan way of living back — not as nostalgia, but as a living, breathing truth for today."
+      },
+      {
+        "icon": "/icon/3.png",
+        "title": "Community building",
+        "desc": "Building a global community of Sanatanis united by faith and shared values."
+      },
+      {
+        "icon": "/icon/4.png",
+        "title": "Truth be told",
+        "desc": "Verified and lab-tested products, experienced Acharyas and Pandits, organic and bamboo-free dhoops and havan cups and more to help you lead a better life."
+      }
+    ]
+  },
+  "missions": [
+    {
+      "num": "01",
+      "title": "Preserve Sacred Traditions",
+      "desc": "Document and digitize centuries-old pooja vidhi so future generations can connect with their roots."
+    },
+    {
+      "num": "02",
+      "title": "Empower Pandits",
+      "desc": "Create sustainable livelihoods for qualified priests by connecting them with devotees worldwide."
+    },
+    {
+      "num": "03",
+      "title": "Make Spirituality Accessible",
+      "desc": "Remove geographical barriers so every Hindu family — wherever they are — can participate in sacred rituals."
+    },
+    {
+      "num": "04",
+      "title": "Support Temples",
+      "desc": "Channel resources and donations to help temples thrive, maintain their heritage, and serve communities."
+    },
+    {
+      "num": "05",
+      "title": "Harness Technology for Dharma",
+      "desc": "Build world-class digital infrastructure that serves the spiritual ecosystem with care and reverence."
+    },
+    {
+      "num": "06",
+      "title": "Build Global Sangha",
+      "desc": "Foster a worldwide community of devotees, scholars, and spiritual seekers grounded in Sanatana Dharma."
+    },
+    {
+      "num": "07",
+      "title": "Educate & Inspire",
+      "desc": "Offer learning resources about Hindu philosophy, rituals, and their timeless relevance in modern life."
+    },
+    {
+      "num": "08",
+      "title": "Ensure Quality & Trust",
+      "desc": "Maintain rigorous standards for every pandit, every ritual, and every experience on our platform."
+    }
+  ],
+  "stats": [
+    { "value": "50,000+", "label": "Organic and bambooless products" },
+    { "value": "1,200+", "label": "Multiple temples, multiple poojas" },
+    { "value": "120+", "label": "Top-of-the-line astrologers " },
+    { "value": "30+", "label": "Well-known Acharyas for exclusive poojas" }
+  ]
+}

@@ -1,0 +1,298 @@
+.footer {
+  // margin-top: 26px;
+  border-top: 1px solid var(--color-border);
+
+  background:rgba(var(--primary-pale-color-rgb), 1.5);
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+}
+
+.inner {
+  padding: 40px 0 22px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 22px;
+}
+
+.brandBlock {
+  display: grid;
+  gap: 12px;
+}
+
+.brand {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+
+  color: var( --primary-color);
+}
+
+.copy {
+  margin: 0;
+  color: var(--muted-text-color);
+  line-height: 1.75;
+  max-width: 46ch;
+  font-size: 15px;
+}
+
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.social {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+  color: var( --primary-color);
+  background: var(--body-background-color);
+
+  border: 1px solid var(--color-border);
+
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.socialLink:hover {
+  box-shadow: var(--shadow-md);
+  background-color: var( --primary-color);
+
+  color: var(--surface-background-color);
+}
+
+.socialLink svg {
+  width: 18px;
+  height: 18px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: var( --primary-color);
+
+  border: 1px solid var(--color-border);
+
+  background: var(--body-background-color);
+}
+
+.column {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+}
+
+.link {
+  width: fit-content;
+
+  color: var(--muted-text-color);
+
+  font-weight: 600;
+  font-size: 14px;
+
+  padding: 6px 0;
+
+  position: relative;
+
+  transition: color 150ms ease;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 2px;
+
+    width: 100%;
+    height: 1.5px;
+
+    background: var( --primary-color);
+
+    transform-origin: left;
+    transform: scaleX(0);
+
+    transition: transform 180ms ease;
+  }
+
+  &:hover {
+    color: var( --primary-color);
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.contactCard {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+
+  border: 1px solid var(--color-border);
+
+  background: var(--body-background-color);
+
+  border-radius: 18px;
+
+  padding: 16px;
+
+  box-shadow: var(--shadow-md);
+}
+
+.miniTitle {
+  margin: 0;
+
+  font-weight: 800;
+
+  letter-spacing: -0.015em;
+
+  color: var( --primary-color);
+}
+
+.contactText {
+  margin: 0;
+
+  color: var(--muted-text-color);
+
+  line-height: 1.65;
+
+  font-size: 14px;
+}
+
+.phone {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  height: 40px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--primary-color);
+
+  background: linear-gradient(
+    180deg,
+    var(--color-surface) 0%,
+    var(--surface-secondary-background-color) 100%
+  );
+
+  color: var( --primary-color);
+
+  font-weight: 800;
+
+  transition: box-shadow 150ms ease, transform 150ms ease;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.callTime {
+  margin: 0;
+
+  color: var(--primary-color);
+
+  font-weight: 700;
+
+  font-size: 14px;
+}
+
+.email {
+  width: fit-content;
+
+  color: var( --primary-color);
+
+  font-weight: 700;
+
+  font-size: 14px;
+}
+
+.bottom {
+  padding: 14px 0 24px;
+
+  display: flex;
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.legal {
+  color: var(--light-text-color);
+}
+
+.bottomLine {
+  margin: 0;
+
+  color: var(--light-text-color);
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.srOnly {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+@media (max-width: 980px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}

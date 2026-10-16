@@ -1,0 +1,136 @@
+.hero {
+  position: relative;
+  min-height: clamp(260px, 40vw, 620px);
+  width: 100%;
+  display: block;
+  padding: 0;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.bgContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.link {
+  display: block;
+  cursor: pointer;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sentinel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(640px, 100%);
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  color: rgba(var(--heading-color-rgb), 0.95);
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--muted-text-color);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.60;
+}
+
+.paragraph {
+  margin: 0;
+  max-width: 64ch;
+  color: rgba(var(--primary-dark-color-rgb), 0.78);
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+.button {
+  margin-top: 6px;
+  width: fit-content;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(var(--surface-background-color-rgb), 0.98);
+  background: linear-gradient(180deg, var(--button-gradient-start), var(--button-gradient-end));
+  box-shadow: 0 12px 24px rgba(var(--primary-dark-color-rgb), 0.18);
+}
+
+.arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Mobile: full 1584×672 art, no stretch — spacing aligned with MiddleBanner */
+@media (max-width: 860px) {
+  .hero {
+    aspect-ratio: 1584 / 672;
+    min-height: unset;
+    height: auto;
+    margin-bottom: 36px;
+  }
+
+  .bg {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero {
+    margin-bottom: 28px;
+  }
+}

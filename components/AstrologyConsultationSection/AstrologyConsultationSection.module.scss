@@ -1,0 +1,118 @@
+.section {
+  padding: 10px 0 52px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 14px;
+}
+
+.deco {
+  color: rgba(var(--accent-dark-color-rgb), 0.62);
+  font-size: 18px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--banner-heading-font);
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.1;
+  color: rgba(var(--heading-color-rgb), 0.96);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card {
+  border-radius: 14px;
+  border: 1px solid rgba(var(--primary-dark-color-rgb), 0.14);
+  background: rgba(var(--surface-background-color-rgb), 0.88);
+  box-shadow: 0 16px 34px rgba(var(--primary-dark-color-rgb), 0.1);
+  padding: 14px 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.cardTitle {
+  margin: 0;
+  min-height: 44px;
+  font-family: var(--banner-heading-font);
+  font-size: clamp(18px, 1.8vw, 23px);
+  line-height: 1.15;
+  color: rgba(var(--heading-color-rgb), 0.95);
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.priceWrap {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-weight: 800;
+  color: rgba(var(--primary-dark-color-rgb), 0.94);
+}
+
+.oldPrice {
+  font-weight: 700;
+  color: rgba(var(--primary-dark-color-rgb), 0.52);
+  text-decoration: line-through;
+}
+
+.duration {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(var(--primary-dark-color-rgb), 0.64);
+}
+
+.cardButton {
+  width: fit-content;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(var(--surface-background-color-rgb), 0.98);
+  background: linear-gradient(180deg, var(--button-gradient-start), var(--button-gradient-end));
+  box-shadow: 0 10px 20px rgba(var(--primary-dark-color-rgb), 0.16);
+}
+
+.arrowSmall {
+  font-size: 16px;
+  line-height: 1;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 8px 0 46px;
+  }
+}

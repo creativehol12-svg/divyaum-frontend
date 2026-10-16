@@ -1,0 +1,439 @@
+/* FoundersSection.module.scss */
+
+.foundersSection {
+  padding: 80px 0;
+  overflow: hidden;
+  background: var(--surface-secondary-background-color);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.sectionHeader {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 44px;
+}
+
+.sectionKicker {
+  margin: 0;
+
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  color: rgba(var(--accent-dark-color-rgb), 0.82);
+}
+
+.sectionTitle {
+  margin: 10px 0 0;
+
+  font-family: var(--banner-heading-font);
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 500;
+
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+
+  color: rgba(var(--heading-color-rgb), 0.96);
+}
+
+.sectionDesc {
+  margin: 14px auto 0;
+
+  max-width: 62ch;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: var(--muted-text-color);
+}
+
+/* ========================================
+   DESKTOP EXPANDABLE GRID
+======================================== */
+
+.foundersGrid {
+  display: flex;
+  gap: 16px;
+
+  width: 100%;
+  max-width: 1400px;
+
+  height: 540px;
+
+  margin-inline: auto;
+}
+
+/* ========================================
+   CARD
+======================================== */
+.founderCard {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 140px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  border-top: 8px solid rgba(var(--heading-color-rgb), 0.96);
+  border-right: 8px solid rgba(var(--heading-color-rgb), 0.96);
+
+  cursor: pointer;
+
+  transition:
+    flex 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+
+  isolation: isolate;
+
+  &:hover {
+    flex: 3;
+    transform: translateY(-4px);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+  }
+
+  &:hover .founderImg {
+    transform: scale(1.06);
+  }
+}
+/* ========================================
+   IMAGE
+======================================== */
+
+.founderMedia {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    160deg,
+    rgba(var(--accent-dark-color-rgb), 0.14),
+    rgba(var(--heading-color-rgb), 0.2)
+  );
+}
+
+.founderImageWrap {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.founderImg {
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.founderInitials {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 900;
+
+  color: rgba(var(--primary-pale-color-rgb), 0.96);
+
+  background: linear-gradient(
+    180deg,
+    var(--button-gradient-start),
+    var(--button-gradient-end)
+  );
+}
+
+.founderDecor {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.72));
+
+  pointer-events: none;
+}
+
+/* ========================================
+   CONTENT OVERLAY
+======================================== */
+
+.founderBody {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 34px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02) 30%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+}
+
+.founderTop {
+  transition: all 0.35s ease;
+}
+
+.founderName {
+  margin: 0;
+
+  font-family: var(--banner-heading-font);
+
+  font-size: 25px;
+  font-weight: 500;
+
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+
+  color: rgba(var(--heading-color-rgb), 0.96);
+
+  transition:
+    opacity 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.founderName:hover {
+  font-size: 32px;
+}
+
+/* DETAILS HIDDEN INITIALLY */
+
+.founderRole,
+.founderBio {
+  opacity: 0;
+
+  max-height: 0;
+
+  overflow: hidden;
+
+  transform: translateY(14px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    max-height 0.35s ease;
+}
+
+.founderRole {
+  margin: 10px 0 0;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+
+  color: rgba(var(--heading-color-rgb), 0.96);
+}
+
+.founderBio {
+  margin: 12px 0 0;
+
+  max-width: 48ch;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  color: var(--muted-text-color);
+}
+
+/* SHOW DETAILS ON HOVER */
+
+.founderCard:hover .founderRole,
+.founderCard:hover .founderBio {
+  opacity: 1;
+
+  max-height: 500px;
+
+  transform: translateY(0);
+}
+
+/* HIDE OTHER CARD TITLES */
+
+.foundersGrid:hover .founderCard:not(:hover) .founderName {
+  opacity: 0;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1024px) {
+  .foundersGrid {
+    height: 440px;
+    gap: 12px;
+  }
+
+  .founderBody {
+    padding: 24px;
+  }
+
+  .founderBio {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   MOBILE PREMIUM STACKED CARDS
+======================================== */
+
+@media (max-width: 768px) {
+  .foundersSection {
+    padding: 56px 0;
+  }
+
+  .sectionHeader {
+    text-align: left;
+    margin-bottom: 34px;
+  }
+
+  .sectionTitle {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .sectionDesc {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .foundersGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    height: auto;
+  }
+
+  .founderCard {
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+
+    border-radius: 24px;
+
+    &:hover {
+      flex: unset;
+      transform: none;
+    }
+  }
+
+  .founderMedia {
+    position: relative;
+
+    inset: unset;
+
+    width: 100%;
+    height: 360px;
+  }
+
+  .founderImageWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .founderImg {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .founderDecor {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.04),
+      rgba(0, 0, 0, 0.34)
+    );
+  }
+
+  .founderBody {
+    position: relative;
+
+    inset: unset;
+
+    padding: 22px 20px 24px;
+  }
+
+  .founderName {
+    font-size: 1.6rem;
+    opacity: 1 !important;
+  }
+
+  .founderName:hover {
+    font-size: 1.6rem;
+  }
+
+  .founderRole,
+  .founderBio {
+    opacity: 1;
+    max-height: unset;
+    overflow: visible;
+    transform: none;
+  }
+
+  .founderRole {
+    margin-top: 8px;
+  }
+
+  .founderBio {
+    margin-top: 14px;
+
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .foundersGrid:hover .founderCard:not(:hover) .founderName {
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .founderCard {
+    border-radius: 20px;
+  }
+
+  .founderMedia {
+    height: 300px;
+  }
+
+  .founderBody {
+    padding: 18px;
+    background: var(--card-background-color);
+  }
+
+  .founderName {
+    font-size: 1.35rem;
+  }
+
+  .founderBio {
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,243 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(var(--primary-black-color-rgb), 0.52);
+  backdrop-filter: blur(4px);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.dialog {
+  width: min(440px, 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(var(--primary-dark-color-rgb), 0.18);
+  background:
+    radial-gradient(circle at top right, rgba(var(--accent-color-rgb), 0.12), transparent 40%),
+    linear-gradient(
+      180deg,
+      rgba(var(--surface-background-color-rgb), 1),
+      rgba(var(--primary-pale-color-rgb), 0.98)
+    );
+  box-shadow: 0 28px 60px rgba(var(--primary-dark-color-rgb), 0.22);
+  padding: clamp(20px, 3vw, 32px);
+}
+
+.center {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  text-align: center;
+}
+
+/* ── Spinner ───────────────────────────────────── */
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(var(--primary-dark-color-rgb), 0.12);
+  border-top-color: var(--button-gradient-start);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Status text ───────────────────────────────── */
+
+.statusText {
+  margin: 0;
+  font-family: var(--banner-heading-font);
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  font-weight: 700;
+  color: rgba(var(--heading-color-rgb), 0.96);
+}
+
+.statusHint {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(var(--primary-dark-color-rgb), 0.7);
+  line-height: 1.55;
+  max-width: 320px;
+}
+
+/* ── Success ───────────────────────────────────── */
+
+.checkIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    var(--color-success-text, #22c55e),
+    var(--color-success-dark, #16a34a)
+  );
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 28px rgba(22, 163, 74, 0.28);
+
+  svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.successTitle {
+  margin: 0;
+  font-family: var(--banner-heading-font);
+  font-size: clamp(1.3rem, 2.6vw, 1.65rem);
+  font-weight: 700;
+  color: var(--color-success-dark, #16a34a);
+}
+
+/* ── Fail ──────────────────────────────────────── */
+
+.failIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    var(--color-danger, #ef4444),
+    var(--color-danger-dark, #dc2626)
+  );
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 28px rgba(220, 38, 38, 0.26);
+
+  svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.failTitle {
+  margin: 0;
+  font-family: var(--banner-heading-font);
+  font-size: clamp(1.3rem, 2.6vw, 1.65rem);
+  font-weight: 700;
+  color: var(--color-danger-dark, #dc2626);
+}
+
+/* ── Summary card ──────────────────────────────── */
+
+.summaryCard {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(var(--surface-background-color-rgb), 0.55);
+  border: 1px solid rgba(var(--primary-dark-color-rgb), 0.1);
+  display: grid;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.summaryLabel {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(var(--accent-dark-color-rgb), 0.76);
+}
+
+.summaryValue {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(var(--primary-dark-color-rgb), 0.88);
+}
+
+.summaryValueBold {
+  font-size: 16px;
+  font-weight: 800;
+  color: rgba(var(--heading-color-rgb), 0.96);
+}
+
+/* ── Buttons ───────────────────────────────────── */
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.primaryBtn {
+  min-height: 42px;
+  padding: 0 22px;
+  border-radius: 10px;
+  border: 1px solid rgba(var(--primary-dark-color-rgb), 0.24);
+  color: rgba(var(--surface-background-color-rgb), 0.98);
+  font-size: 14px;
+  font-weight: 800;
+  background: linear-gradient(
+    180deg,
+    var(--button-gradient-start),
+    var(--button-gradient-end)
+  );
+  box-shadow: 0 10px 22px rgba(var(--primary-dark-color-rgb), 0.18);
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all 140ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(var(--primary-dark-color-rgb), 0.24);
+  }
+}
+
+.secondaryBtn {
+  min-height: 42px;
+  padding: 0 22px;
+  border-radius: 10px;
+  border: 1px solid rgba(var(--primary-dark-color-rgb), 0.28);
+  color: rgba(var(--heading-color-rgb), 0.88);
+  font-size: 14px;
+  font-weight: 800;
+  background: rgba(var(--surface-background-color-rgb), 0.9);
+  box-shadow: 0 4px 12px rgba(var(--primary-dark-color-rgb), 0.08);
+  cursor: pointer;
+  transition: all 140ms ease;
+
+  &:hover {
+    background: rgba(var(--surface-background-color-rgb), 1);
+    box-shadow: 0 8px 20px rgba(var(--primary-dark-color-rgb), 0.12);
+  }
+}
+
+@media (max-width: 480px) {
+  .dialog {
+    padding: 18px 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+  }
+}

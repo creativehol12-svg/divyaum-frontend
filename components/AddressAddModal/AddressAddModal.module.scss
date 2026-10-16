@@ -1,0 +1,121 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(var(--primary-black-color-rgb), 0.45);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.dialog {
+  width: min(440px, 100%);
+  max-height: min(92vh, 640px);
+  overflow: auto;
+  border-radius: 20px;
+  border: 1px solid rgba(var(--primary-dark-color-rgb), 0.14);
+  background: linear-gradient(180deg, rgba(var(--surface-background-color-rgb), 0.98), rgba(var(--primary-pale-color-rgb), 0.96));
+  box-shadow: 0 24px 56px rgba(var(--primary-dark-color-rgb), 0.22);
+  padding: 22px 22px 20px;
+}
+
+.dialogTitle {
+  margin: 0 0 4px;
+  font-family: var(--banner-heading-font);
+  font-size: 1.35rem;
+  color: rgba(var(--heading-color-rgb), 0.96);
+}
+
+.dialogHint {
+  margin: 0 0 18px;
+  font-size: 13px;
+  color: rgba(var(--primary-dark-color-rgb), 0.62);
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(var(--heading-color-rgb), 0.78);
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(var(--primary-dark-color-rgb), 0.18);
+  background: rgba(var(--surface-background-color-rgb), 0.95);
+  padding: 10px 12px;
+  font-size: 15px;
+  color: rgba(var(--primary-dark-color-rgb), 0.92);
+  font-family: inherit;
+
+  &:focus {
+    outline: 2px solid rgba(var(--accent-color-rgb), 0.45);
+    outline-offset: 1px;
+  }
+}
+
+.textarea {
+  min-height: 96px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.error {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(var(--color-danger-border-rgb), 0.95);
+}
+
+.dialogActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.btnGhost {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  background: rgba(var(--primary-pale-color-rgb), 0.95);
+  color: rgba(var(--heading-color-rgb), 0.92);
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}
+
+.btnPrimary {
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 14px;
+  border: 1px solid rgba(var(--accent-dark-color-rgb), 0.28);
+  background: linear-gradient(180deg, var(--button-gradient-start), var(--button-gradient-end));
+  color: rgba(var(--surface-background-color-rgb), 0.98);
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.65;
+    cursor: wait;
+  }
+}

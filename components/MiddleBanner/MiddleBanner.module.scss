@@ -1,0 +1,51 @@
+/* components/MiddleBanner/MiddleBanner.module.scss */
+
+.bannerWrapper {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 clamp(12px, 5vw, 65px);
+  margin: 36px 0;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  max-width: 1210px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 1210px;
+  aspect-ratio: 1210 / 455;
+  height: auto;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.image {
+  // object-fit: cover;
+  object-position: center;
+}
+
+/* Match Hero mobile breakpoints for consistent spacing */
+@media (max-width: 860px) {
+  .bannerWrapper {
+    padding: 0 12px;
+    margin: 36px 0;
+  }
+
+  .banner {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 620px) {
+  .bannerWrapper {
+    margin: 28px 0;
+  }
+}
